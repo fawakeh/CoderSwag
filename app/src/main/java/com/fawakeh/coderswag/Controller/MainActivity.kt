@@ -3,6 +3,7 @@
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ArrayAdapter
+import android.widget.Toast
 import com.fawakeh.coderswag.Adapters.CategoryAdapter
 import com.fawakeh.coderswag.Model.Category
 import com.fawakeh.coderswag.R
@@ -20,6 +21,10 @@ import kotlinx.android.synthetic.main.activity_main.*
         adapter = CategoryAdapter(this, DataService.categories)
 
         categoryListView.adapter = adapter
+
+       
+
+        }
     }
 
 
