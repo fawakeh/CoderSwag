@@ -3,11 +3,12 @@
                                                    xmlns:app="http://schemas.android.com/apk/res-auto"
                                                    xmlns:tools="http://schemas.android.com/tools"
                                                    android:layout_width="match_parent"
-                                                   android:layout_height="wrap_content">
+                                                   android:layout_height="wrap_content" android:id="@+id/margin"
+>
 
     <ImageView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content" app:srcCompat="@drawable/hat1"
+            android:layout_width="211dp"
+            android:layout_height="234dp" app:srcCompat="@drawable/hat1"
             android:id="@+id/productImage"
             android:scaleType="center"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
@@ -35,11 +36,13 @@
             android:text="-"
             android:layout_width="38dp"
             android:layout_height="41dp"
-            app:layout_constraintEnd_toEndOf="parent" android:id="@+id/removeFromCart"
+            android:id="@+id/removeFromCart"
             style="@style/Widget.AppCompat.Button.Borderless"
-            android:textColor="@color/colorPrimary" android:layout_marginEnd="140dp"
+            android:textColor="@color/colorPrimary"
             android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="@+id/productName"
-            app:layout_constraintTop_toBottomOf="@+id/productImage" android:onClick="countOut"/>
+            app:layout_constraintTop_toBottomOf="@+id/productImage"
+            app:layout_constraintVertical_bias="0.555" app:layout_constraintStart_toEndOf="@+id/itemCounter"
+            android:layout_marginStart="8dp"/>
     <Button
             android:text="+"
             android:layout_width="38dp"
@@ -47,16 +50,15 @@
             android:id="@+id/addToCart" android:layout_marginBottom="8dp"
             style="@style/Widget.AppCompat.Button.Borderless"
             android:textColor="@color/colorPrimary"
-            android:layout_marginStart="120dp" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toTopOf="@+id/productName"
-            app:layout_constraintTop_toBottomOf="@+id/productImage" android:onClick="countIN"/>
+            app:layout_constraintTop_toBottomOf="@+id/productImage"
+            app:layout_constraintVertical_bias="0.555" android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/itemCounter"/>
     <TextView
-            android:text="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/itemCounter" android:textColor="@color/colorPrimary"
-            app:layout_constraintStart_toEndOf="@+id/addToCart" android:layout_marginStart="8dp"
-            app:layout_constraintEnd_toStartOf="@+id/removeFromCart" android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="@+id/productName"
-            app:layout_constraintTop_toBottomOf="@+id/productImage" app:layout_constraintHorizontal_bias="0.5"/>
+            app:layout_constraintTop_toBottomOf="@+id/productImage" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintVertical_bias="0.538"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

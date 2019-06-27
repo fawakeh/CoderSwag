@@ -1,7 +1,9 @@
 package com.fawakeh.coderswag.Model
 
+
 import android.os.Parcel
 import android.os.Parcelable
+
 
 class Product(val title: String, val price: String, val image: String, val description: String) : Parcelable{
     constructor(parcel: Parcel) : this(

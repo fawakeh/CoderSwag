@@ -4,8 +4,10 @@ import android.content.Intent
 import android.content.res.Configuration
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Adapter
 import android.widget.GridLayout
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.GridLayoutManager
 import com.fawakeh.coderswag.Adapters.Products_adapter
 import com.fawakeh.coderswag.Model.Product
@@ -53,5 +55,9 @@ class ProductsActivity : AppCompatActivity() {
 
 
 
+    }
+    fun onShoppingCartClicked(view: View){
+        val addToCart = Intent(this, ProductscartActivity::class.java)
+       startActivity(addToCart)
     }
 }
