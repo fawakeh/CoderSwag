@@ -15,7 +15,8 @@
             app:layout_constraintTop_toTopOf="parent"
             android:textSize="18sp"
             android:id="@+id/textView" android:layout_marginTop="16dp"
-            android:layout_marginStart="16dp" app:layout_constraintStart_toStartOf="parent"/>
+            android:layout_marginStart="16dp" app:layout_constraintStart_toStartOf="parent"
+    />
     <ImageView
             android:layout_width="183dp"
             android:layout_height="226dp" app:srcCompat="@drawable/hoodie2"
@@ -47,11 +48,12 @@
             android:layout_width="138dp"
             android:layout_height="38dp"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
-            android:id="@+id/button" style="@style/Widget.AppCompat.Button.Borderless"
+            android:id="@+id/addCartBtn" style="@style/Widget.AppCompat.Button.Borderless"
             android:background="@drawable/btn_rounded" android:textColor="@android:color/background_light"
             app:layout_constraintBottom_toBottomOf="parent"
             android:layout_marginBottom="32dp" app:layout_constraintHorizontal_bias="0.498"
-            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/productDescription"/>
+            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/productDescription"
+            android:onClick="onAddCartClicked"/>
     <TextView
             android:text="WAW"
             android:layout_width="282dp"
@@ -62,4 +64,12 @@
             app:layout_constraintHorizontal_bias="0.493" android:layout_marginTop="60dp"
             app:layout_constraintTop_toBottomOf="@+id/productPrice"
             android:textAlignment="center"/>
+    <Button
+            android:text="cart"
+            android:layout_width="86dp"
+            android:layout_height="42dp" app:layout_constraintTop_toTopOf="@+id/textView"
+            android:layout_marginTop="4dp" android:id="@+id/cartBtn" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="16dp" style="@style/Widget.AppCompat.Button.Borderless"
+            android:textColor="@color/colorPrimary" android:onClick="onShoppingCartClicked"
+            app:layout_constraintBottom_toBottomOf="@+id/textView"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
